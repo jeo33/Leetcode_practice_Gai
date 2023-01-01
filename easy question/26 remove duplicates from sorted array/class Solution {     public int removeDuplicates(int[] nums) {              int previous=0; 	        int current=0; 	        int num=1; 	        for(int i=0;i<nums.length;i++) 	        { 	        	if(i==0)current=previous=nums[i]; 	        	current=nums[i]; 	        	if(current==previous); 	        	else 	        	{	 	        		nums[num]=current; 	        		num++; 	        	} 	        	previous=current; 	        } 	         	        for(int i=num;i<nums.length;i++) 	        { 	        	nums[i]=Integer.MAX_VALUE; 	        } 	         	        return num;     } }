@@ -1,0 +1,26 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+             int previous=0;
+	        int current=0;
+	        int num=1;
+	        for(int i=0;i<nums.length;i++)
+	        {
+	        	if(i==0)current=previous=nums[i];
+	        	current=nums[i];
+	        	if(current==previous);
+	        	else
+	        	{	
+	        		nums[num]=current;
+	        		num++;
+	        	}
+	        	previous=current;
+	        }
+	        
+	        for(int i=num;i<nums.length;i++)
+	        {
+	        	nums[i]=Integer.MAX_VALUE;
+	        }
+	        
+	        return num;
+    }
+}
